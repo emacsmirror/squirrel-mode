@@ -173,7 +173,9 @@
 (define-derived-mode squirrel-mode prog-mode "Squirrel"
   "A major mode for the Squirrel programming language."
   :syntax-table squirrel-mode-syntax-table
-  (setq-local font-lock-defaults '(squirrel-font-lock-keywords)))
+  (setq-local font-lock-defaults '(squirrel-font-lock-keywords))
+  (setq-local comment-start "# ")
+  (setq-local comment-end ""))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.nut\\'" . squirrel-mode))
